@@ -13,12 +13,12 @@ lab.experiment('Basic HTTP Tests', () => {
             url: '/hello/Homer'
         };
 
-        Server.inject(options, ( response ) => {
+            Server.inject(options, ( response ) => {
 
-            Code.expect(response.statusCode).to.equal(200);
-            Code.expect(response.result).to.equal('Hello, Homer!');
-            done();
-        });
+                Code.expect(response.statusCode).to.equal(200);
+                Code.expect(response.result).to.equal('Hello, Homer1!');
+                done();
+            });
     });
 
     lab.test('Greets /hello/Homer%20Simpson} ', (done) => {
